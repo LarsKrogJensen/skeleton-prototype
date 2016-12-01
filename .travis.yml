@@ -1,5 +1,4 @@
 sudo: required
-language: java
-language: groovy
+language: [java, groovy]
 before_install:
  - chmod +x gradlew
