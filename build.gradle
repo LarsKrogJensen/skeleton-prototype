@@ -10,6 +10,29 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    test {
+        java.srcDir 'src/test/groovy'
+        resources.srcDir 'src/test/resources'
+    }
+    integration {
+        java.srcDir 'src/integration/groovy'
+        resources.srcDir 'src/integration/resources'
+        compileClasspath += main.output + test.output
+        runtimeClasspath += main.output + test.output
+    }
+}
+
+configurations {
+    integrationCompile.extendsFrom testCompile
+    integrationRuntime.extendsFrom testRuntime
+}
+
+task integration(type: Test, description: 'Runs the integration tests.', group: 'Verification') {
+    testClassesDir = sourceSets.integration.output.classesDir
+    classpath = sourceSets.integration.runtimeClasspath
+}
+
 dependencies {
     // https://mvnrepository.com/artifact/io.vertx/vertx-web
     compile group: 'io.vertx', name: 'vertx-web', version: '3.3.3'

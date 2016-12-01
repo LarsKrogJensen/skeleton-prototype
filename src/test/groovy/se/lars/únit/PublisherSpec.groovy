@@ -1,4 +1,4 @@
-package se.lars
+package se.lars.únit
 
 import se.lars.util.Publisher
 import se.lars.util.Subscriber
