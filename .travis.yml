@@ -4,11 +4,11 @@ jdk:
 - oraclejdk8
 before_install:
 - chmod +x gradlew
-deploy:
-  api_key:
-    secure: IFpasRVqoRKRQtar0pGdqc6wR2/GgsGLKkfX/M8BJ6J3xJ2N3wOlrb7tSqMhxE0yLIdO0f316ZDpa6T+e4+L/wiL4xIWxQzuCN6ArFWL0Jwj2PxJtgtx23WeeZXYnnw3BcTIYuGY3X0cYTZLjmtcDNpaM3yQuaHegbbZkaQhfoYD5nyyywHU7iMog9+CErgJ/B6MhCqlrd5Mh0RVoQIUk98IswyV5f+hMdptVSWkLnjp5WStOYS4jr8zTNsCuSJ2EWMrxX6cxtW1GZdrQtt39HUTCY+28Ok2+8YGkF9wF5naOJJZq0OlQAOJlkTwt+r8OxrWatT9I1jLiCY6qP4ZdrMeAigyOB1F06dhF1s7bXNxXAHrTj69V5slzsAQNvuwfbCiU3wfp6wpoCS6bNOo0g7yaIwzje94xfbRAaByR0/t0TeUFMozWzAxd+0LRxGApDSSAxTJpDvyBQI3qrEnnRlOWL+GpZVoVdAOqkQczrmmTs+paxpSn/3ATOcFY884EZzQohtQd+vfZIzUjbna72zWRC/1YFaLFMqOVbyELLVgwAyX9KXcwZeJwC/SDJK2q3aU3sT3YiCUaXIgCamekOW8aEustwbAeBHdsXXamhxxybmPBrF4AWQoA87c2gz6GK0iaNQvHU1Hd/ECBI1B25MCUSPzQ6bUbjcUx8nO8YM=
-  provider: heroku
-  strategy: api
-  app:
-    master: larskj-app1-master
-    featureX: larskj-app1-featurex
+#deploy:
+#  api_key:
+#    secure: IFpasRVqoRKRQtar0pGdqc6wR2/GgsGLKkfX/M8BJ6J3xJ2N3wOlrb7tSqMhxE0yLIdO0f316ZDpa6T+e4+L/wiL4xIWxQzuCN6ArFWL0Jwj2PxJtgtx23WeeZXYnnw3BcTIYuGY3X0cYTZLjmtcDNpaM3yQuaHegbbZkaQhfoYD5nyyywHU7iMog9+CErgJ/B6MhCqlrd5Mh0RVoQIUk98IswyV5f+hMdptVSWkLnjp5WStOYS4jr8zTNsCuSJ2EWMrxX6cxtW1GZdrQtt39HUTCY+28Ok2+8YGkF9wF5naOJJZq0OlQAOJlkTwt+r8OxrWatT9I1jLiCY6qP4ZdrMeAigyOB1F06dhF1s7bXNxXAHrTj69V5slzsAQNvuwfbCiU3wfp6wpoCS6bNOo0g7yaIwzje94xfbRAaByR0/t0TeUFMozWzAxd+0LRxGApDSSAxTJpDvyBQI3qrEnnRlOWL+GpZVoVdAOqkQczrmmTs+paxpSn/3ATOcFY884EZzQohtQd+vfZIzUjbna72zWRC/1YFaLFMqOVbyELLVgwAyX9KXcwZeJwC/SDJK2q3aU3sT3YiCUaXIgCamekOW8aEustwbAeBHdsXXamhxxybmPBrF4AWQoA87c2gz6GK0iaNQvHU1Hd/ECBI1B25MCUSPzQ6bUbjcUx8nO8YM=
+#  provider: heroku
+#  strategy: api
+#  app:
+#    master: larskj-app1-master
+#    featureX: larskj-app1-featurex
