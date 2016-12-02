@@ -22,7 +22,7 @@ public class WebServerVerticle extends AbstractVerticle {
             HttpServerResponse response = routingContext.response();
             response
                     .putHeader("content-type", "text/html")
-                    .end("<h1>Hello you from my first Vert.x 3 application</h1>");
+                    .end("<h1>Hello me from my first Vert.x 3 application</h1>");
         });
 
         int port = Optional.ofNullable(System.getenv("PORT"))
