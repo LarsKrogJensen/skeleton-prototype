@@ -8,7 +8,7 @@ dependencies:
     - heroku plugins:install heroku-cli-deploy
 deployment:
   staging:
-    branch: master
+    branch: /.*/
     commands:
       - chmod +x ./deploy-heroku.sh
       - ./deploy-heroku.sh
