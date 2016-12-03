@@ -10,5 +10,6 @@ deployment:
   staging:
     branch: master
     commands:
+      - gradle shadowJar
       - heroku deploy:jar build/libs/skeleton-prototype-fat.jar --app larskj-app1-master
 
