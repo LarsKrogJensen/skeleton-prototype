@@ -1,6 +1,6 @@
 machine:
   environment:
-    heroku-app-name-base: larskj-app1
+    heroku_app_name_base: larskj-app1
   java:
     version: openjdk8
 dependencies:
