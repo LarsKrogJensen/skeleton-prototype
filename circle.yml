@@ -2,15 +2,15 @@ machine:
   environment:
     heroku_app_name_base: larskj-app1
   java:
-    version: openjdk8
+    version: oraclejdk8
 dependencies:
   pre:
     - heroku plugins:install heroku-cli-deploy
-#test:
-#  override:
-#    - gradle check jacocoTestReport
-#  post:
-#    - cp -R build/reports/* $CIRCLE_ARTIFACTS
+test:
+  override:
+    - gradle check jacocoTestReport
+  post:
+    - cp -R build/reports/* $CIRCLE_ARTIFACTS
 deployment:
   staging:
     branch: /.*/
