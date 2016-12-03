@@ -1,8 +1,18 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+    }
+}
 group 'se.lars'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'groovy'
 apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
 
 sourceCompatibility = 1.8
 
@@ -47,4 +57,19 @@ dependencies {
     testCompile group: 'io.vertx', name: 'vertx-unit', version: '3.3.3'
     // https://mvnrepository.com/artifact/org.spockframework/spock-core
     testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'se.lars.Main'
+    }
+}
+
+shadowJar{
+    mergeServiceFiles('META-INF/spring.*')
+    exclude "META-INF/*.SF"
+    exclude "META-INF/*.DSA"
+    exclude "META-INF/*.RSA"
+    exclude "META-INF/LICENSE"
+    archiveName = "${baseName}-fat.${extension}"
 }

@@ -1,0 +1,14 @@
+# heroku plugins:install heroku-cli-deploy
+#heroku deploy:jar build\libs\skeleton-prototype-fat.jar --app larskj-app1-master
+machine:
+  java:
+    version: openjdk8
+dependencies:
+  pre:
+    - heroku plugins:install heroku-cli-deploy
+deployment:
+  staging:
+    branch: master
+    commands:
+      - heroku deploy:jar build\libs\skeleton-prototype-fat.jar --app larskj-app1-master
+
