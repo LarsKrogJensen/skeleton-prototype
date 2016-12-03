@@ -10,7 +10,6 @@ deployment:
   staging:
     branch: master
     commands:
-      - gradle shadowJar
-      - heroku apps:create ${heroku-app-name-base}-${CIRCLE_BRANCH} --no-remote --region eu
-      - heroku deploy:jar build/libs/skeleton-prototype-fat.jar --app ${heroku-app-name-base}-${CIRCLE_BRANCH}
+      - chmod +x ./deploy-heroku.sh
+      - ./deploy-heroku.sh
 
