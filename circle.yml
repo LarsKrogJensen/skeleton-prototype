@@ -6,6 +6,11 @@ machine:
 dependencies:
   pre:
     - heroku plugins:install heroku-cli-deploy
+test:
+  override:
+    - gradle check jacocoTestReport
+  post:
+    - cp -R build/reports/* $CIRCLE_ARTIFACTS
 deployment:
   staging:
     branch: /.*/
